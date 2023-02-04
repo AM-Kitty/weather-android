@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/currentDataFragment">
+
+    <fragment
+        android:id="@+id/locationEntryFragment"
+        android:name="com.project.androidbase.location.LocationEntryFragment"
+        android:label="Location Entry Fragment"
+        tools:layout="@layout/fragment_location_entry" >
+        <action
+            android:id="@+id/action_locationEntryFragment_to_currentDataFragment"
+            app:destination="@id/currentDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentDataFragment"
+        android:name="com.project.androidbase.location.CurrentDataFragment"
+        android:label="Current Data Fragment"
+        tools:layout="@layout/fragment_current_data" >
+        <action
+            android:id="@+id/action_currentDataFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_currentDataFragment_to_locationEntryFragment"
+            app:destination="@id/locationEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.project.androidbase.details.SecondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second" >
+        <argument
+            android:name="temp"
+            app:argType="float" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/futureDataFragment"
+        android:name="com.project.androidbase.location.FutureDataFragment"
+        android:label="FutureDataFragment"
+        tools:layout="@layout/fragment_future_data">
+        <action
+            android:id="@+id/action_futureDataFragment_to_locationEntryFragment"
+            app:destination="@id/locationEntryFragment" />
+        <action
+            android:id="@+id/action_futureDataFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+</navigation>
