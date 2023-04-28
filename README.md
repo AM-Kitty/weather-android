@@ -29,7 +29,7 @@ OPEN_WEATHER_MAP_API_KEY=<insert>
 
 ## 📃 License
 ```
-Copyright 2023 Tongxu Ge
+Copyright 2023 Kelly Ge
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
